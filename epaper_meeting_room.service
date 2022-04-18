@@ -1,0 +1,13 @@
+[Unit]
+Description=Meeting Room e-Paper
+After=multi-user.target
+Conflicts=getty@tty1.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/e-Paper/
+ExecStart=/usr/bin/python3 /home/pi/e-Paper/epaper_meeting_room.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
